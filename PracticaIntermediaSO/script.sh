@@ -21,13 +21,15 @@ do
         3) #Si la opción elegida es 3 y tiene permisos de ejecucion, ejecuta el programa.
             echo ""
             if test -x programa
+                echo Escribe el número de asistentes de vuelo del avión:
+                read asistentesDeVuelo
             then
-                until test $asistentesDeVuelo -ge $constanteQueEsIgualA1
-                do
-                    echo Escribe el número de asistentes de vuelo del avión:
-                    read asistentesDeVuelo
-                done
-                ./programa $asistentesDeVuelo 
+                if test $asistentesDeVuelo -ge $constanteQueEsIgualA1
+                then
+                    ./programa $asistentesDeVuelo
+                else
+                    echo Número de asistentes de vuelo no válido.
+                fi
             else  
                 echo Permiso denegado.
             fi 
