@@ -4,5 +4,5 @@
 int main(int argc, char *argv[])
 {
     int asistentesDeVuelo = atoi(argv[1]);
-    printf("Hola mundo, %d", asistentesDeVuelo);
+    printf("El número de asistentes de vuelo es: %d", asistentesDeVuelo);
 }
